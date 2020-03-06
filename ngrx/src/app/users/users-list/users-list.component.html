@@ -1,0 +1,14 @@
+<p>users-list works!</p>
+
+<div>
+    <textarea [(ngModel)]="json" rows="5" cols="50"></textarea><br>
+    <button (click)="addUser()">Add User</button>
+</div>
+
+<div>
+  <h2>User List</h2>
+  <div *ngFor="let user of users">
+      <p>{{user?.name.first}}</p>
+      <p>{{user?.name.last}}</p>
+  </div>
+</div>
